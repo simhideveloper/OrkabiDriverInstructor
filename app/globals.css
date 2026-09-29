@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens for the Orkabi (אורקבי) landing page.
+ *
+ * Font convention for later agents:
+ * - Use the `font-heading` utility class (Rubik, via --font-rubik) on headings (h1/h2/h3 already get it by default below).
+ * - Body text uses `font-sans` (Heebo, via --font-heebo), which is applied globally on <body>.
+ */
+@theme inline {
+  --color-ink: #171a21;
+  --color-ink-800: #23262f;
+
+  --color-paper: #faf8f4;
+  --color-paper-100: #f4f1ea;
+
+  --color-slate: #5b6472;
+  --color-slate-light: #8a92a0;
+
+  --color-amber-500: #f2a93b;
+  --color-amber-600: #db8a17;
+  --color-amber-700: #b4650c;
+
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #1ebe5b;
+
+  --color-hairline: #e7e2d6;
+
+  --font-heading: var(--font-rubik), sans-serif;
+  --font-sans: var(--font-heebo), sans-serif;
+
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+}
+
+body {
+  @apply bg-paper text-ink font-sans;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-heading;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Hero road visual: subtle forward-drift animation on the lane-marking dashes. */
+@keyframes road-dash-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .road-dash-anim {
+    animation: road-dash-drift 3.2s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+}
