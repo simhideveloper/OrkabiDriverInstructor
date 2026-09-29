@@ -8,7 +8,7 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-amber-700 text-white shadow-sm hover:bg-amber-600 hover:shadow-md active:scale-[0.98]",
+    "bg-blue-700 text-white shadow-sm hover:bg-blue-600 hover:shadow-md active:scale-[0.98]",
   outline:
     "border-2 border-ink text-ink bg-transparent hover:bg-ink hover:text-white active:scale-[0.98]",
   whatsapp:

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Phone } from "lucide-react";
 import { siteContent } from "@/content/site-content";
-import { Container, Ltr, Button } from "@/components/ui";
+import { Container, Ltr, Button, LearnerSign } from "@/components/ui";
 
 type Indicator = {
   left: number;
@@ -118,7 +118,7 @@ export function Nav() {
       {/* Scroll-progress bar. Anchored to the inline-start edge so it fills
           start-to-end (right-to-left) to match RTL reading direction. */}
       <div
-        className="absolute inset-x-0 top-0 h-[3px] transform-gpu bg-amber-600 will-change-transform"
+        className="absolute inset-x-0 top-0 h-[3px] transform-gpu bg-blue-600 will-change-transform"
         style={{
           transform: `scaleX(${scrollProgress / 100})`,
           transformOrigin: "right",
@@ -130,15 +130,16 @@ export function Nav() {
         <div className="flex h-16 items-center justify-between md:h-20">
           <a
             href="#hero"
-            className="font-heading text-xl font-extrabold text-ink"
+            className="flex items-center gap-2 font-heading text-xl font-extrabold text-ink"
           >
+            <LearnerSign size={28} className="shrink-0" />
             {business.name}
           </a>
 
           <nav ref={navRef} className="relative hidden items-center gap-8 md:flex">
             {indicator ? (
               <span
-                className={`pointer-events-none absolute -bottom-2 h-0.5 rounded-full bg-amber-700 ${
+                className={`pointer-events-none absolute -bottom-2 h-0.5 rounded-full bg-blue-700 ${
                   reducedMotion ? "" : "transition-[left,width] duration-300 ease-out"
                 }`}
                 style={{ left: indicator.left, width: indicator.width }}
@@ -155,8 +156,8 @@ export function Nav() {
                   }}
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
-                  className={`text-sm font-medium transition-colors duration-200 hover:text-amber-700 ${
-                    isActive ? "text-amber-700" : "text-ink"
+                  className={`text-sm font-medium transition-colors duration-200 hover:text-blue-700 ${
+                    isActive ? "text-blue-700" : "text-ink"
                   }`}
                 >
                   {link.label}
@@ -168,7 +169,7 @@ export function Nav() {
           <div className="hidden items-center gap-4 md:flex">
             <a
               href={business.phoneHref}
-              className="text-sm font-semibold text-ink transition-colors duration-200 hover:text-amber-700"
+              className="text-sm font-semibold text-ink transition-colors duration-200 hover:text-blue-700"
             >
               <Ltr>{business.phoneDisplay}</Ltr>
             </a>
@@ -180,7 +181,7 @@ export function Nav() {
           <a
             href={business.phoneHref}
             aria-label="התקשרו אלינו"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-ink text-white transition-colors duration-200 hover:bg-amber-700 md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-ink text-white transition-colors duration-200 hover:bg-blue-700 md:hidden"
           >
             <Phone size={18} />
           </a>

@@ -24,11 +24,11 @@ export const siteContent: SiteContent = {
     name: "עורקבי",
     instructorName: "תומר עורקבי",
     tagline: "איתך בביטחון, כל הדרך לרישיון",
-    phoneDisplay: "054-765-4321",
-    phoneHref: "tel:+972547654321",
-    whatsappDisplay: "054-765-4321",
+    phoneDisplay: "054-481-3030",
+    phoneHref: "tel:+972544813030",
+    whatsappDisplay: "054-481-3030",
     whatsappHref:
-      "https://wa.me/972547654321?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%20%D7%A0%D7%94%D7%99%D7%92%D7%94",
+      "https://wa.me/972544813030?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%20%D7%A0%D7%94%D7%99%D7%92%D7%94",
     email: "info@orkabi-driving.co.il",
     baseCity: "רמת גן",
     license: "מורה נהיגה מוסמך ע\"י משרד התחבורה, בעל רישיון הוראה בתוקף",
@@ -64,7 +64,7 @@ export const siteContent: SiteContent = {
     trustBadges: [
       { icon: "shield", label: "הסמכה ממשרד התחבורה" },
       { icon: "award", label: "רישיון הוראה בתוקף" },
-      { icon: "car", label: "רכב אוטומט חדש עם שני דוושים" },
+      { icon: "car", label: "CUPRA חדש, אוטומט עם שני דוושים" },
     ],
   },
 
@@ -200,7 +200,7 @@ export const siteContent: SiteContent = {
     {
       icon: "car",
       title: "רכב חדש ומאובזר",
-      description: "רכב אוטומט חדש עם שני דוושים, מטופל ומבוטח בביטוח מקיף.",
+      description: "CUPRA חדש ומאובזר, אוטומט עם שני דוושים, מטופל ומבוטח בביטוח מקיף.",
     },
     {
       icon: "mapPin",

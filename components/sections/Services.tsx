@@ -42,8 +42,8 @@ function ServiceCard({ service, index }: { service: ServiceItem; index: number }
       style={{ transitionDelay: `${Math.min(index, STAGGER_CAP) * STAGGER_STEP_MS}ms` }}
       className={`reveal flex flex-col gap-4 ${isInView ? "is-visible" : ""}`}
     >
-      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10">
-        <Icon size={22} className="text-amber-700" aria-hidden="true" />
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-lime-500/10">
+        <Icon size={22} className="text-lime-700" aria-hidden="true" />
       </div>
       <h3 className="font-heading text-lg font-semibold text-ink">
         {service.title}

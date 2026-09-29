@@ -16,9 +16,9 @@ export function RoadDivider({
       className={`flex items-center gap-2 ${align === "center" ? "justify-center" : "justify-start"} ${className}`}
       aria-hidden="true"
     >
-      <span className="h-1 w-6 rounded-full bg-amber-500" />
-      <span className="h-1 w-6 rounded-full bg-amber-500" />
-      <span className="h-1 w-3 rounded-full bg-amber-500/50" />
+      <span className="h-1 w-6 rounded-full bg-lime-500" />
+      <span className="h-1 w-6 rounded-full bg-lime-500" />
+      <span className="h-1 w-3 rounded-full bg-lime-500/50" />
     </div>
   );
 }

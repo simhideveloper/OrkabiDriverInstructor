@@ -18,7 +18,7 @@ export function StarRating({
           key={i}
           size={16}
           strokeWidth={1.5}
-          className={i < rating ? "fill-amber-500 text-amber-500" : "fill-transparent text-hairline"}
+          className={i < rating ? "fill-lime-700 text-lime-700" : "fill-transparent text-hairline"}
         />
       ))}
     </div>

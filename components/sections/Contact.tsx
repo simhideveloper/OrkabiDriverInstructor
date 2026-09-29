@@ -3,7 +3,7 @@ import { siteContent } from "@/content/site-content";
 import { Container, Ltr, RoadDivider, Button, Reveal } from "@/components/ui";
 
 const focusRing =
-  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded-sm";
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-500 focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded-sm";
 
 export function Contact() {
   const { contact, business } = siteContent;
@@ -12,7 +12,7 @@ export function Contact() {
     <section id="contact" className="scroll-mt-20 bg-ink py-16 text-white md:scroll-mt-24 md:py-24">
       <Container>
         <Reveal className="flex flex-col gap-4">
-          <span className="text-sm font-bold tracking-wide text-amber-500">{contact.eyebrow}</span>
+          <span className="text-sm font-bold tracking-wide text-lime-500">{contact.eyebrow}</span>
           <RoadDivider align="start" />
           <h2 className="text-3xl font-bold leading-tight text-white md:text-4xl">
             {contact.title}
@@ -27,37 +27,37 @@ export function Contact() {
           <Reveal className="flex flex-col gap-8">
             <ul className="flex flex-col gap-5">
               <li className="flex items-center gap-3">
-                <Phone size={20} className="shrink-0 text-amber-500" aria-hidden="true" />
+                <Phone size={20} className="shrink-0 text-lime-500" aria-hidden="true" />
                 <a
                   href={business.phoneHref}
-                  className={`text-white/90 transition-colors hover:text-amber-500 ${focusRing}`}
+                  className={`text-white/90 transition-colors hover:text-lime-500 ${focusRing}`}
                 >
                   <Ltr>{business.phoneDisplay}</Ltr>
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <MessageCircle size={20} className="shrink-0 text-amber-500" aria-hidden="true" />
+                <MessageCircle size={20} className="shrink-0 text-lime-500" aria-hidden="true" />
                 <a
                   href={business.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-white/90 transition-colors hover:text-amber-500 ${focusRing}`}
+                  className={`text-white/90 transition-colors hover:text-lime-500 ${focusRing}`}
                 >
                   <Ltr>{business.whatsappDisplay}</Ltr>
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={20} className="shrink-0 text-amber-500" aria-hidden="true" />
+                <Mail size={20} className="shrink-0 text-lime-500" aria-hidden="true" />
                 <a
                   href={`mailto:${business.email}`}
-                  className={`text-white/90 transition-colors hover:text-amber-500 ${focusRing}`}
+                  className={`text-white/90 transition-colors hover:text-lime-500 ${focusRing}`}
                 >
                   {business.email}
                 </a>
               </li>
               {business.hours.map((hour) => (
                 <li key={hour.label} className="flex items-center gap-3">
-                  <Clock size={20} className="shrink-0 text-amber-500" aria-hidden="true" />
+                  <Clock size={20} className="shrink-0 text-lime-500" aria-hidden="true" />
                   <span className="text-white/90">
                     {hour.label}: <Ltr>{hour.value}</Ltr>
                   </span>

@@ -65,7 +65,7 @@ function PricingTierCard({
       className={`reveal relative ${isInView ? "is-visible" : ""}`}
     >
       {tier.highlighted ? (
-        <span className="absolute -top-3 inset-x-0 z-10 mx-auto w-fit rounded-full bg-amber-700 px-4 py-1 text-xs font-bold text-white shadow-sm">
+        <span className="absolute -top-3 inset-x-0 z-10 mx-auto w-fit rounded-full bg-lime-700 px-4 py-1 text-xs font-bold text-white shadow-sm">
           הכי משתלם
         </span>
       ) : null}
@@ -73,7 +73,7 @@ function PricingTierCard({
       <div
         className={`flex h-full flex-col gap-5 rounded-2xl bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md motion-safe:hover:-translate-y-0.5 ${
           tier.highlighted
-            ? "border-2 border-amber-700 shadow-lg md:scale-105"
+            ? "border-2 border-lime-700 shadow-lg md:scale-105"
             : "border border-hairline"
         }`}
       >
@@ -100,7 +100,7 @@ function PricingTierCard({
             <li key={feature} className="flex items-start gap-2 text-sm text-slate">
               <CheckIcon
                 size={18}
-                className="mt-0.5 shrink-0 text-amber-700"
+                className="mt-0.5 shrink-0 text-lime-700"
                 aria-hidden="true"
               />
               <span>{feature}</span>

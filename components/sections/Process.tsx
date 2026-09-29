@@ -54,18 +54,18 @@ function ProcessStepCard({
       {!isLast ? (
         <>
           <span
-            className="absolute top-2 bottom-[-2.5rem] start-5 w-px bg-amber-500/30 md:hidden"
+            className="absolute top-2 bottom-[-2.5rem] start-5 w-px bg-lime-500/30 md:hidden"
             aria-hidden="true"
           />
           <span
-            className="absolute top-6 hidden h-px w-full border-t-2 border-dashed border-amber-500/40 md:block md:start-1/2"
+            className="absolute top-6 hidden h-px w-full border-t-2 border-dashed border-lime-500/40 md:block md:start-1/2"
             aria-hidden="true"
           />
         </>
       ) : null}
 
       <div className="relative flex items-center gap-4 md:flex-col md:items-start md:gap-2">
-        <span className="font-heading text-4xl font-extrabold text-amber-500/40 md:text-5xl">
+        <span className="font-heading text-4xl font-extrabold text-lime-500/40 md:text-5xl">
           <Ltr>{step.number}</Ltr>
         </span>
       </div>

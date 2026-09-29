@@ -27,7 +27,7 @@ export function ServiceArea() {
                 key={city}
                 className="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-5 py-2.5 text-base font-medium text-ink shadow-sm"
               >
-                <MapPin size={18} className="text-amber-700" aria-hidden="true" />
+                <MapPin size={18} className="text-lime-700" aria-hidden="true" />
                 {city}
               </span>
             ))}

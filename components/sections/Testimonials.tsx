@@ -43,7 +43,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
     >
       <Quote
         size={72}
-        className="pointer-events-none absolute -end-3 -top-3 text-amber-500/20"
+        className="pointer-events-none absolute -end-3 -top-3 text-lime-500/20"
         aria-hidden="true"
       />
 

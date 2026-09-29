@@ -16,13 +16,13 @@ export function Hero() {
           {/* Content side — visually right in RTL (reading-start) */}
           <div className="flex flex-col items-start gap-6">
             <div className="hero-enter hero-enter-1 flex flex-col gap-3">
-              <span className="text-sm font-bold text-amber-700">{hero.eyebrow}</span>
+              <span className="text-sm font-bold text-blue-700">{hero.eyebrow}</span>
               <RoadDivider align="start" />
             </div>
 
             <h1 className="hero-enter hero-enter-2 text-4xl font-extrabold leading-[1.1] text-ink sm:text-5xl md:text-6xl">
               <span>{hero.title}</span>
-              <span className="text-amber-700">{hero.highlightWord}</span>
+              <span className="text-blue-700">{hero.highlightWord}</span>
             </h1>
 
             <p className="hero-enter hero-enter-3 max-w-xl text-lg leading-relaxed text-slate">
@@ -53,8 +53,9 @@ export function Hero() {
             <div className="hero-enter hero-enter-5 flex flex-wrap gap-3 pt-4">
               {hero.trustBadges.map((badge) => {
                 const Icon = iconMap[badge.icon];
+                const iconColorClass = badge.icon === "car" ? "text-copper-500" : "text-lime-700";
                 return (
-                  <Badge key={badge.label} icon={<Icon size={16} className="text-amber-700" />}>
+                  <Badge key={badge.label} icon={<Icon size={16} className={iconColorClass} />}>
                     {badge.label}
                   </Badge>
                 );
@@ -98,16 +99,16 @@ function RoadVisual() {
       >
         <defs>
           <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#23262f" />
-            <stop offset="100%" stopColor="#171a21" />
+            <stop offset="0%" stopColor="#101c38" />
+            <stop offset="100%" stopColor="#04102a" />
           </linearGradient>
           <linearGradient id="roadGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stopColor="#2c3038" />
-            <stop offset="100%" stopColor="#1a1d24" />
+            <stop offset="0%" stopColor="#212a45" />
+            <stop offset="100%" stopColor="#10152a" />
           </linearGradient>
           <radialGradient id="horizonGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#f2a93b" stopOpacity="0.35" />
-            <stop offset="100%" stopColor="#f2a93b" stopOpacity="0" />
+            <stop offset="0%" stopColor="#9cbc3d" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="#9cbc3d" stopOpacity="0" />
           </radialGradient>
         </defs>
 
@@ -125,19 +126,19 @@ function RoadVisual() {
 
         {/* lane-marking dashes, shrinking toward the vanishing point */}
         <g className="road-dash-anim" style={{ animationDelay: "0s" }}>
-          <rect x="178" y="512" width="44" height="54" rx="7" fill="#f2a93b" />
+          <rect x="178" y="512" width="44" height="54" rx="7" fill="#9cbc3d" />
         </g>
         <g className="road-dash-anim" style={{ animationDelay: "0.15s" }}>
-          <rect x="183" y="436" width="34" height="42" rx="6" fill="#f2a93b" opacity="0.92" />
+          <rect x="183" y="436" width="34" height="42" rx="6" fill="#9cbc3d" opacity="0.92" />
         </g>
         <g className="road-dash-anim" style={{ animationDelay: "0.3s" }}>
-          <rect x="188" y="370" width="24" height="30" rx="4" fill="#f2a93b" opacity="0.85" />
+          <rect x="188" y="370" width="24" height="30" rx="4" fill="#9cbc3d" opacity="0.85" />
         </g>
         <g className="road-dash-anim" style={{ animationDelay: "0.45s" }}>
-          <rect x="192" y="316" width="16" height="20" rx="3" fill="#f2a93b" opacity="0.78" />
+          <rect x="192" y="316" width="16" height="20" rx="3" fill="#9cbc3d" opacity="0.78" />
         </g>
         <g className="road-dash-anim" style={{ animationDelay: "0.6s" }}>
-          <rect x="195" y="278" width="10" height="12" rx="2" fill="#f2a93b" opacity="0.7" />
+          <rect x="195" y="278" width="10" height="12" rx="2" fill="#9cbc3d" opacity="0.7" />
         </g>
       </svg>
     </div>

@@ -31,7 +31,13 @@ export function About() {
                 return (
                   <Badge
                     key={credential.label}
-                    icon={<Icon size={16} className="text-amber-700" aria-hidden="true" />}
+                    icon={
+                      <Icon
+                        size={16}
+                        className={credential.icon === "car" ? "text-copper-500" : "text-lime-700"}
+                        aria-hidden="true"
+                      />
+                    }
                   >
                     {credential.label}
                   </Badge>

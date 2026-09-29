@@ -64,12 +64,12 @@ function FaqAccordionItem({
         aria-expanded={isOpen}
         aria-controls={panelId}
         onClick={onToggle}
-        className="flex w-full items-center justify-between gap-4 rounded-lg py-5 text-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 focus-visible:ring-offset-2"
+        className="flex w-full items-center justify-between gap-4 rounded-lg py-5 text-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
       >
         <span className="font-heading font-semibold text-ink">{item.question}</span>
         <ChevronDown
           size={20}
-          className={`shrink-0 text-amber-700 transition-transform duration-300 ${
+          className={`shrink-0 text-blue-700 transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
           aria-hidden="true"

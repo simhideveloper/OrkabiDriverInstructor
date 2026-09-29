@@ -8,8 +8,14 @@
  * - Body text uses `font-sans` (Heebo, via --font-heebo), which is applied globally on <body>.
  */
 @theme inline {
-  --color-ink: #171a21;
-  --color-ink-800: #23262f;
+  /*
+   * Brand palette — sampled from the instructor's real WhatsApp business
+   * badge (dark navy banner, royal-blue learner-sign border, lime/olive
+   * "trust" checkmarks) plus a copper/bronze accent tied to his CUPRA
+   * training car's grille badge. Amber/near-black "ink" have been retired.
+   */
+  --color-ink: #04102a; /* deep navy — dark sections, primary text on paper */
+  --color-ink-800: #101c38; /* lighter navy panel (footer bg) */
 
   --color-paper: #faf8f4;
   --color-paper-100: #f4f1ea;
@@ -17,9 +23,23 @@
   --color-slate: #5b6472;
   --color-slate-light: #8a92a0;
 
-  --color-amber-500: #f2a93b;
-  --color-amber-600: #db8a17;
-  --color-amber-700: #b4650c;
+  /* Royal/cobalt blue — primary interactive accent (links, nav active state,
+     buttons, focus rings, section eyebrows), replacing the old amber-700 role. */
+  --color-blue-500: #2e56b8;
+  --color-blue-600: #1b3f98;
+  --color-blue-700: #0f2c79;
+
+  /* Lime/olive green — "trust/success" accent: checkmarks, star ratings,
+     badges, underline/divider bars, icon highlights, and the bright accent
+     on dark navy backgrounds (Contact, Footer). lime-500 is for
+     backgrounds/borders/decorative (aria-hidden) use only; lime-700 is the
+     contrast-safe shade for any visible icon glyph or text use. */
+  --color-lime-500: #9cbc3d;
+  --color-lime-700: #4f6b1d;
+
+  /* Copper/bronze — sampled from the CUPRA grille badge. Sparing, tertiary
+     use only: the "car" icon in trust badges/credentials/WhyUs. */
+  --color-copper-500: #b27a5e;
 
   --color-whatsapp: #25d366;
   --color-whatsapp-hover: #1ebe5b;

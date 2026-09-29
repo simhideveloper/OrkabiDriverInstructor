@@ -18,7 +18,7 @@ export function SectionHeading({
   return (
     <div className={`flex flex-col gap-4 ${alignClass} ${className}`}>
       {eyebrow ? (
-        <span className="text-sm font-bold tracking-wide text-amber-700">{eyebrow}</span>
+        <span className="text-sm font-bold tracking-wide text-blue-700">{eyebrow}</span>
       ) : null}
       <RoadDivider align={align} />
       <h2 className="text-3xl font-bold leading-tight text-ink md:text-4xl">{title}</h2>
