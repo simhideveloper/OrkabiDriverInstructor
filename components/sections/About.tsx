@@ -47,7 +47,7 @@ export function About() {
                 <User size={48} className="text-white/70" aria-hidden="true" />
               </div>
               <span className="text-sm font-medium text-white/60">
-                תמונת דורון אורקבי
+                תמונת תומר עורקבי
               </span>
             </div>
           </div>
