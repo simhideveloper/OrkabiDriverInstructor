@@ -1,6 +1,6 @@
-# אורקבי — דף נחיתה למורה נהיגה פרטי
+# עורקבי — דף נחיתה למורה נהיגה פרטי
 
-Hebrew/RTL marketing landing page for a private driving instructor business ("אורקבי" / Orkabi) in Israel.
+Hebrew/RTL marketing landing page for a private driving instructor business ("עורקבי" / Orkabi) in Israel.
 
 ## Stack
 

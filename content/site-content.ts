@@ -2,7 +2,7 @@
 // PLACEHOLDER BUSINESS CONTENT — NOT REAL DATA
 // ---------------------------------------------------------------------------
 // This file contains realistic-looking but entirely fictional placeholder
-// content for the "אורקבי" driving-instructor landing page. Before launch,
+// content for the "עורקבי" driving-instructor landing page. Before launch,
 // the client MUST replace every value below with their real business
 // details, including (but not limited to):
 //   - Business/instructor name, tagline and about copy
@@ -21,7 +21,7 @@ import type { SiteContent } from "./types";
 
 export const siteContent: SiteContent = {
   business: {
-    name: "אורקבי",
+    name: "עורקבי",
     instructorName: "תומר עורקבי",
     tagline: "איתך בביטחון, כל הדרך לרישיון",
     phoneDisplay: "054-765-4321",
@@ -333,11 +333,11 @@ export const siteContent: SiteContent = {
 
   footer: {
     about:
-      "אורקבי - מורה נהיגה פרטי בראשות תומר עורקבי, עם 12 שנות ניסיון בהוראת נהיגה ברמת גן והסביבה.",
+      "עורקבי - מורה נהיגה פרטי בראשות תומר עורקבי, עם 12 שנות ניסיון בהוראת נהיגה ברמת גן והסביבה.",
     legal: [
       "מורה נהיגה מוסמך ע\"י משרד התחבורה · רישיון הוראה מס' 123456",
       "הרכב מבוטח בביטוח מקיף",
-      "© 2026 אורקבי - כל הזכויות שמורות",
+      "© 2026 עורקבי - כל הזכויות שמורות",
     ],
     quickLinks: [
       { label: "אודות", href: "#about" },
