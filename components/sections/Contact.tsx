@@ -1,6 +1,9 @@
 import { Phone, MessageCircle, Mail, Clock } from "lucide-react";
 import { siteContent } from "@/content/site-content";
-import { Container, Ltr, RoadDivider, Button } from "@/components/ui";
+import { Container, Ltr, RoadDivider, Button, Reveal } from "@/components/ui";
+
+const focusRing =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded-sm";
 
 export function Contact() {
   const { contact, business } = siteContent;
@@ -8,7 +11,7 @@ export function Contact() {
   return (
     <section id="contact" className="scroll-mt-20 bg-ink py-16 text-white md:scroll-mt-24 md:py-24">
       <Container>
-        <div className="flex flex-col gap-4">
+        <Reveal className="flex flex-col gap-4">
           <span className="text-sm font-bold tracking-wide text-amber-500">{contact.eyebrow}</span>
           <RoadDivider align="start" />
           <h2 className="text-3xl font-bold leading-tight text-white md:text-4xl">
@@ -17,15 +20,18 @@ export function Contact() {
           <p className="max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
             {contact.subtitle}
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-10 md:mt-12 md:grid-cols-2">
           {/* Contact info + CTAs */}
-          <div className="flex flex-col gap-8">
+          <Reveal className="flex flex-col gap-8">
             <ul className="flex flex-col gap-5">
               <li className="flex items-center gap-3">
                 <Phone size={20} className="shrink-0 text-amber-500" aria-hidden="true" />
-                <a href={business.phoneHref} className="text-white/90 transition-colors hover:text-amber-500">
+                <a
+                  href={business.phoneHref}
+                  className={`text-white/90 transition-colors hover:text-amber-500 ${focusRing}`}
+                >
                   <Ltr>{business.phoneDisplay}</Ltr>
                 </a>
               </li>
@@ -35,7 +41,7 @@ export function Contact() {
                   href={business.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/90 transition-colors hover:text-amber-500"
+                  className={`text-white/90 transition-colors hover:text-amber-500 ${focusRing}`}
                 >
                   <Ltr>{business.whatsappDisplay}</Ltr>
                 </a>
@@ -44,7 +50,7 @@ export function Contact() {
                 <Mail size={20} className="shrink-0 text-amber-500" aria-hidden="true" />
                 <a
                   href={`mailto:${business.email}`}
-                  className="text-white/90 transition-colors hover:text-amber-500"
+                  className={`text-white/90 transition-colors hover:text-amber-500 ${focusRing}`}
                 >
                   {business.email}
                 </a>
@@ -80,10 +86,10 @@ export function Contact() {
                 התקשרו עכשיו
               </Button>
             </div>
-          </div>
+          </Reveal>
 
           {/* Map */}
-          <div className="h-80 overflow-hidden rounded-2xl border border-white/10 md:h-full md:min-h-[320px]">
+          <Reveal delay={120} className="h-80 overflow-hidden rounded-2xl border border-white/10 md:h-full md:min-h-[320px]">
             <iframe
               src={contact.mapEmbedSrc}
               title="מפת אזור השירות"
@@ -93,7 +99,7 @@ export function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
               className="h-full w-full"
             />
-          </div>
+          </Reveal>
         </div>
       </Container>
     </section>

@@ -15,21 +15,21 @@ export function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
           {/* Content side — visually right in RTL (reading-start) */}
           <div className="flex flex-col items-start gap-6">
-            <div className="flex flex-col gap-3">
+            <div className="hero-enter hero-enter-1 flex flex-col gap-3">
               <span className="text-sm font-bold text-amber-700">{hero.eyebrow}</span>
               <RoadDivider align="start" />
             </div>
 
-            <h1 className="text-4xl font-extrabold leading-[1.1] text-ink sm:text-5xl md:text-6xl">
+            <h1 className="hero-enter hero-enter-2 text-4xl font-extrabold leading-[1.1] text-ink sm:text-5xl md:text-6xl">
               <span>{hero.title}</span>
               <span className="text-amber-700">{hero.highlightWord}</span>
             </h1>
 
-            <p className="max-w-xl text-lg leading-relaxed text-slate">
+            <p className="hero-enter hero-enter-3 max-w-xl text-lg leading-relaxed text-slate">
               {hero.subtitle}
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-2">
+            <div className="hero-enter hero-enter-4 flex flex-wrap gap-4 pt-2">
               <Button
                 variant="whatsapp"
                 size="lg"
@@ -50,7 +50,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <div className="flex flex-wrap gap-3 pt-4">
+            <div className="hero-enter hero-enter-5 flex flex-wrap gap-3 pt-4">
               {hero.trustBadges.map((badge) => {
                 const Icon = iconMap[badge.icon];
                 return (
@@ -61,7 +61,7 @@ export function Hero() {
               })}
             </div>
 
-            <div className="flex items-stretch gap-6 pt-6 sm:gap-10">
+            <div className="hero-enter hero-enter-5 flex items-stretch gap-6 pt-6 sm:gap-10">
               {hero.stats.map((stat, index) => (
                 <div
                   key={stat.label}

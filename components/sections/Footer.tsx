@@ -2,6 +2,9 @@ import { Phone, MessageCircle, Mail } from "lucide-react";
 import { siteContent } from "@/content/site-content";
 import { Container, Ltr } from "@/components/ui";
 
+const focusRing =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-800 rounded-sm";
+
 export function Footer() {
   const { footer, business } = siteContent;
 
@@ -19,7 +22,7 @@ export function Footer() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-white/70 transition-colors hover:text-amber-500"
+                className={`text-sm text-white/70 transition-colors hover:text-amber-500 ${focusRing}`}
               >
                 {link.label}
               </a>
@@ -30,7 +33,7 @@ export function Footer() {
         <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
           <a
             href={business.phoneHref}
-            className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-amber-500"
+            className={`flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-amber-500 ${focusRing}`}
           >
             <Phone size={16} aria-hidden="true" />
             <Ltr>{business.phoneDisplay}</Ltr>
@@ -39,14 +42,14 @@ export function Footer() {
             href={business.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-amber-500"
+            className={`flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-amber-500 ${focusRing}`}
           >
             <MessageCircle size={16} aria-hidden="true" />
             <Ltr>{business.whatsappDisplay}</Ltr>
           </a>
           <a
             href={`mailto:${business.email}`}
-            className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-amber-500"
+            className={`flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-amber-500 ${focusRing}`}
           >
             <Mail size={16} aria-hidden="true" />
             {business.email}

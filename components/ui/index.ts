@@ -6,3 +6,4 @@ export { Button } from "./Button";
 export { StarRating } from "./StarRating";
 export { Card } from "./Card";
 export { Badge } from "./Badge";
+export { Reveal } from "./Reveal";

@@ -1,6 +1,6 @@
 import { User } from "lucide-react";
 import { siteContent } from "@/content/site-content";
-import { Container, SectionHeading, Badge } from "@/components/ui";
+import { Container, SectionHeading, Badge, Reveal } from "@/components/ui";
 import { iconMap } from "@/components/ui/icon-map";
 
 export function About() {
@@ -14,7 +14,7 @@ export function About() {
       <Container>
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
           {/* Content side — reading-start in RTL */}
-          <div className="flex flex-col gap-6">
+          <Reveal className="flex flex-col gap-6">
             <SectionHeading eyebrow={about.eyebrow} title={about.title} />
 
             <div className="flex flex-col gap-4">
@@ -38,10 +38,10 @@ export function About() {
                 );
               })}
             </div>
-          </div>
+          </Reveal>
 
           {/* Image placeholder side — reading-end in RTL, desktop-forward but visible on mobile too */}
-          <div className="relative mx-auto w-full max-w-sm">
+          <Reveal delay={120} className="relative mx-auto w-full max-w-sm">
             <div className="relative flex aspect-[4/5] w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-ink-800 to-ink shadow-lg">
               <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white/10">
                 <User size={48} className="text-white/70" aria-hidden="true" />
@@ -50,7 +50,7 @@ export function About() {
                 תמונת תומר עורקבי
               </span>
             </div>
-          </div>
+          </Reveal>
         </div>
       </Container>
     </section>

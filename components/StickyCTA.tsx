@@ -6,7 +6,7 @@ export function StickyCTA() {
   const { business } = siteContent;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-hairline bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_12px_rgba(0,0,0,0.06)] backdrop-blur md:hidden">
+    <div className="sticky-cta-enter fixed inset-x-0 bottom-0 z-50 border-t border-hairline bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_12px_rgba(0,0,0,0.06)] backdrop-blur md:hidden">
       <div className="flex items-center gap-3 px-4 py-3">
         <Button
           variant="outline"

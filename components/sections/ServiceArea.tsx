@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react";
 import { siteContent } from "@/content/site-content";
-import { Container, SectionHeading } from "@/components/ui";
+import { Container, SectionHeading, Reveal } from "@/components/ui";
 
 export function ServiceArea() {
   const { serviceArea } = siteContent;
@@ -11,14 +11,16 @@ export function ServiceArea() {
       className="scroll-mt-20 bg-paper py-16 md:scroll-mt-24 md:py-24"
     >
       <Container>
-        <SectionHeading
-          eyebrow="אזור שירות"
-          title={serviceArea.title}
-          subtitle={serviceArea.subtitle}
-          align="center"
-        />
+        <Reveal>
+          <SectionHeading
+            eyebrow="אזור שירות"
+            title={serviceArea.title}
+            subtitle={serviceArea.subtitle}
+            align="center"
+          />
+        </Reveal>
 
-        <div className="mx-auto mt-10 max-w-4xl rounded-2xl bg-paper-100 p-8 md:mt-12 md:p-12">
+        <Reveal delay={100} className="mx-auto mt-10 max-w-4xl rounded-2xl bg-paper-100 p-8 md:mt-12 md:p-12">
           <div className="flex flex-wrap justify-center gap-3">
             {serviceArea.cities.map((city) => (
               <span
@@ -30,7 +32,7 @@ export function ServiceArea() {
               </span>
             ))}
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );
